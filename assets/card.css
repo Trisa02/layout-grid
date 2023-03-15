@@ -1,0 +1,107 @@
+div.card {
+  width: 100%;
+  border: 1px solid var(--secondary);
+  height: fit-content;
+}
+
+.card-title {
+  color: var(--dark);
+  background-color: var(--secondary);
+  font-weight: lighter;
+  padding: 10px !important;
+  font-size: 1.3rem;
+}
+
+div.card-primary {
+  padding: 0;
+  border: 1px solid var(--primary);
+}
+
+.card-primary > .card-title {
+  color: var(--white) !important;
+  background-color: var(--primary);
+  padding: 10px !important;
+}
+
+div.card-primary > .card-body {
+  padding: 10px !important;
+}
+
+div.card-body div[class*="col"] {
+  padding: 5px;
+}
+
+div.card > p.subtitle {
+  padding: 0 10px;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+div.card-body {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* EXPAND CARD */
+.panel-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.panel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  /* padding: 10px; */
+}
+
+.panel-body {
+  font-size: 1em;
+  padding: 15px;
+  background-color: rgba(1, 1, 1, 0.5);
+  /* text-align: center; */
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none;
+}
+
+.panel-body p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.panel.active {
+  flex: 5;
+  border-radius: 20;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.panel.active > .panel-body {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .panel {
+    margin: 0;
+    border-radius: 0;
+  }
+}
